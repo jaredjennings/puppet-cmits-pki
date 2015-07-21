@@ -29,10 +29,6 @@ define pki::nss::dod_email_cas($pwfile='', $sqlite=true) {
     }
 
     nss_cert {
-        "${name}:DoD-email-Root2-CA21":;
-        "${name}:DoD-email-Root2-CA22":;
-        "${name}:DoD-email-Root2-CA23":;
-        "${name}:DoD-email-Root2-CA24":;
         "${name}:DoD-email-Root2-CA25":;
         "${name}:DoD-email-Root2-CA26":;
         "${name}:DoD-email-Root2-CA27":;
@@ -53,5 +49,9 @@ define pki::nss::dod_email_cas($pwfile='', $sqlite=true) {
         "${name}:DoD-email-Root2-CA18": ensure => absent;
         "${name}:DoD-email-Root2-CA19": ensure => absent;   
         "${name}:DoD-email-Root2-CA20": ensure => absent;
+        "${name}:DoD-email-Root2-CA21": ensure => absent;
+        "${name}:DoD-email-Root2-CA22": ensure => absent;
+        "${name}:DoD-email-Root2-CA23": ensure => absent;
+        "${name}:DoD-email-Root2-CA24": ensure => absent;
 	}
 }

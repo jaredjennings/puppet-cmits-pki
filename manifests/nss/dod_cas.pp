@@ -29,10 +29,6 @@ define pki::nss::dod_cas($pwfile='', $sqlite=true) {
     }
 
     nss_cert {
-        "${name}:DoD-Root2-CA21":;
-        "${name}:DoD-Root2-CA22":;
-        "${name}:DoD-Root2-CA23":;
-        "${name}:DoD-Root2-CA24":;
         "${name}:DoD-Root2-CA25":;
         "${name}:DoD-Root2-CA26":;
         "${name}:DoD-Root2-CA27":;
@@ -55,5 +51,9 @@ define pki::nss::dod_cas($pwfile='', $sqlite=true) {
         "${name}:DoD-Root2-CA18": ensure => absent;
         "${name}:DoD-Root2-CA19": ensure => absent;
         "${name}:DoD-Root2-CA20": ensure => absent;
+        "${name}:DoD-Root2-CA21": ensure => absent;
+        "${name}:DoD-Root2-CA22": ensure => absent;
+        "${name}:DoD-Root2-CA23": ensure => absent;
+        "${name}:DoD-Root2-CA24": ensure => absent;
     }
 }

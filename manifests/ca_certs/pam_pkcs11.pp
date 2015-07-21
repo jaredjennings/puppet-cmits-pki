@@ -30,12 +30,6 @@ class pki::ca_certs::pam_pkcs11 {
         require => Pki::Nss::Db["/etc/pki/pam_pkcs11"],
     }
     nss_cert {
-        "DoD-Root2-CA19":;
-        "DoD-Root2-CA20":;
-        "DoD-Root2-CA21":;
-        "DoD-Root2-CA22":;
-        "DoD-Root2-CA23":;
-        "DoD-Root2-CA24":;
         "DoD-Root2-CA25":;
         "DoD-Root2-CA26":;
         "DoD-Root2-CA27":;
@@ -55,6 +49,12 @@ class pki::ca_certs::pam_pkcs11 {
         "DoD-Root2-CA16": ensure => absent;
         "DoD-Root2-CA17": ensure => absent;
         "DoD-Root2-CA18": ensure => absent;
+        "DoD-Root2-CA19": ensure => absent;
+        "DoD-Root2-CA20": ensure => absent;
+        "DoD-Root2-CA21": ensure => absent;
+        "DoD-Root2-CA22": ensure => absent;
+        "DoD-Root2-CA23": ensure => absent;
+        "DoD-Root2-CA24": ensure => absent;
     }
 }
 
