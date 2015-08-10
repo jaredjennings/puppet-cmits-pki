@@ -24,7 +24,7 @@ class pki::ca_certs::libpurple {
     define install() {
         $cacerts = $::osfamily ? {
             'RedHat' => '/usr/share/purple/ca-certs',
-            default  => unimplemented(),
+            default  => fail("unimplemented on ${::osfamily}")(),
         }
         file { "$cacerts/$name":
             owner => root, group => 0, mode => 0444,
@@ -35,7 +35,7 @@ class pki::ca_certs::libpurple {
     define remove() {
         $cacerts = $::osfamily ? {
             'RedHat' => '/usr/share/purple/ca-certs',
-            default  => unimplemented(),
+            default  => fail("unimplemented on ${::osfamily}")(),
         }
         file { "$cacerts/$name":
             ensure => absent,
