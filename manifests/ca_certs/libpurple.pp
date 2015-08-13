@@ -27,7 +27,7 @@ class pki::ca_certs::libpurple {
             default  => fail("unimplemented on ${::osfamily}")(),
         }
         file { "$cacerts/$name":
-            owner => root, group => 0, mode => 0444,
+            owner => root, group => 0, mode => '0444',
             source => "puppet:///modules/pki/all-ca-certs/$name",
             require => Package['libpurple'],
         }

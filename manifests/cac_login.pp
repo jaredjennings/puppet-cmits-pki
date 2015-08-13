@@ -103,7 +103,7 @@ gnome-screensaver:kscreensaver",
 # couldn't write an Augeas lens for it within a couple of hours, so we just
 # copy the file over.
     file { "/etc/pam_pkcs11/pam_pkcs11.conf":
-        owner => root, group => 0, mode => 0644,
+        owner => root, group => 0, mode => '0644',
         source => "puppet:///modules/pki/pam_pkcs11.conf",
     }
 }

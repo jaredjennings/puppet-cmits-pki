@@ -23,6 +23,6 @@
 class pki {
     file { '/etc/pki':
         ensure => directory,
-        owner => root, group => 0, mode => 0644,
+        owner => root, group => 0, mode => '0644',
     }
 }

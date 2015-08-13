@@ -22,7 +22,7 @@
 
 class pki::ca_certs::pam_pkcs11 {
     pki::nss::db { "/etc/pki/pam_pkcs11":
-        owner => root, group => 0, mode => 0644,
+        owner => root, group => 0, mode => '0644',
     }
     Nss_cert {
         dbdir => "/etc/pki/pam_pkcs11",

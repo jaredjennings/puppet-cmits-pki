@@ -25,18 +25,18 @@ class pki::tls::crl($http_proxy='') {
 
     file { "/etc/pki/tls/crls":
         ensure => directory,
-        owner => root, group => 0, mode => 0644,
+        owner => root, group => 0, mode => '0644',
         recurse => true, recurselimit => 1,
     }
 
     file { "/usr/sbin/refresh_crls.py":
-        owner => root, group => 0, mode => 0755,
+        owner => root, group => 0, mode => '0755',
         source => "puppet:///modules/pki/\
 get_crl/refresh_crls.py",
     }
 
     file { "/etc/cron.daily/refresh_crls":
-        owner => root, group => 0, mode => 0700,
+        owner => root, group => 0, mode => '0700',
         content => "#!/bin/sh\n\
 export http_proxy=${http_proxy}\n\
 /usr/sbin/refresh_crls.py \

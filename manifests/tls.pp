@@ -21,12 +21,12 @@
 class pki::tls($http_proxy='') {
 # Make sure the private TLS directory is actually private.
     file { "/etc/pki/tls/private":
-        owner => root, group => 0, mode => 0600,
+        owner => root, group => 0, mode => '0600',
         recurse => true, recurselimit => 3,
     }
 # This one has to be executable
     file { "/etc/pki/tls/private/.startup":
-        owner => root, group => 0, mode => 0700,
+        owner => root, group => 0, mode => '0700',
     }
 
     include pki::ca_certs::tls

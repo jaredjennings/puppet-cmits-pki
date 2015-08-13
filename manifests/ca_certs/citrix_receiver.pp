@@ -23,7 +23,7 @@
 class pki::ca_certs::citrix_receiver {
     define install($cacerts) {
         file { "$cacerts/$name":
-            owner => root, group => 0, mode => 0444,
+            owner => root, group => 0, mode => '0444',
             source => "puppet:///modules/pki/all-ca-certs/$name",
         }
     }

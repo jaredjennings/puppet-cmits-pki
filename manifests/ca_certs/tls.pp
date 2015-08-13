@@ -24,7 +24,7 @@ class pki::ca_certs::tls {
     include pki
     file { "/etc/pki/tls":
         ensure => directory,
-        owner => root, group => 0, mode => 0644,
+        owner => root, group => 0, mode => '0644',
     }
     file { "/etc/pki/tls/cacerts":
         ensure => directory,
@@ -34,6 +34,6 @@ class pki::ca_certs::tls {
         recurselimit => 2,
         ignore => ".svn",
         purge => true,
-        owner => root, group => 0, mode => 0644,
+        owner => root, group => 0, mode => '0644',
     }
 }

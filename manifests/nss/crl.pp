@@ -20,7 +20,7 @@
 
 define pki::nss::crl($dbdir, $pwfile, $http_proxy='', $sqlite=true) {
     file { "/usr/sbin/refresh_crls_nss.py":
-        owner => root, group => 0, mode => 0755,
+        owner => root, group => 0, mode => '0755',
         source => "puppet:///modules/pki/\
 get_crl/refresh_crls_nss.py",
     }
@@ -30,7 +30,7 @@ get_crl/refresh_crls_nss.py",
         false => '-B',
     }
     file { "/etc/cron.daily/refresh_nss_crls_${name}":
-        owner => root, group => 0, mode => 0700,
+        owner => root, group => 0, mode => '0700',
         content => "#!/bin/sh
 export http_proxy=${http_proxy}
 

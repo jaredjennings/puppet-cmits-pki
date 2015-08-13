@@ -26,7 +26,7 @@ class pki::ca_certs::pkinit {
     include pki
     file { "/etc/pki/pkinit":
         ensure => directory,
-        owner => root, group => 0, mode => 0644,
+        owner => root, group => 0, mode => '0644',
         source => "puppet:///modules/pki/pkinit",
         recurse => true,
 # We are copying files in a subdirectory---increase recurselimit.

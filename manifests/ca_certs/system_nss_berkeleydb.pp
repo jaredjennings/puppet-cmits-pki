@@ -20,7 +20,7 @@
 class pki::ca_certs::system_nss_berkeleydb {
     $db = "/etc/pki/nssdb"
     pki::nss::db { $db:
-        owner => root, group => 0, mode => 0644,
+        owner => root, group => 0, mode => '0644',
         sqlite => false,
     }
     pki::nss::dod_roots { $db: sqlite => false }
